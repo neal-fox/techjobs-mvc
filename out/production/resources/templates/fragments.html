@@ -29,9 +29,9 @@
 
     <div th:fragment="job-listings">
            <table th:each="job : ${jobs}" class="job-listing">
-               <tr th:each="column : ${job}">
-                   <td th:text="${column.key}"></td>
-                   <td th:text="${column.value}"></td>
+               <tr th:each="column : job">
+                   <td th:text="${job.key}"></td>
+                   <td th:text="${job.value}"></td>
                </tr>
            </table>
     </div>
